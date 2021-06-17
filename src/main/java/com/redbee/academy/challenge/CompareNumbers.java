@@ -1,5 +1,9 @@
 package com.redbee.academy.challenge;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class CompareNumbers {
 
   /**
@@ -12,7 +16,16 @@ public class CompareNumbers {
    * @return The max of a, b and c
    */
   public static Integer max(Integer a, Integer b, Integer c) {
-    //TODO: Implement me
-    return null;
+	List<Integer> list = new ArrayList<Integer>();
+	addNumbers(a, list);
+	addNumbers(b, list);
+	addNumbers(c, list);
+    return list.isEmpty() ? 0 : Collections.max(list);
+  }
+  
+  public static void addNumbers(Integer x, List<Integer> list) {
+	  if(x!=null) {
+		  list.add(x);
+	  }
   }
 }

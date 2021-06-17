@@ -39,4 +39,12 @@ public class CompareNumbersTests {
     assertNotNull(result, "The result cannot be null");
     assertEquals(2, result);
   }
+  
+  @Test
+  @DisplayName("Test when null values are sent")
+  public void testNullValue() {
+    Integer result = CompareNumbers.max(null, 2, 7);
+    assertNotNull(result, "The result cannot be null");
+    assertEquals(7, result);
+  }
 }
